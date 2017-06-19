@@ -3,7 +3,7 @@
     "VersionName": "20170619A",
     "Description": "Base build OpenWRT for Atheros9331",
     "ReleaseData": "2017.06.19 00:00",
-    "link":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/20170619A/main.sh",
+    "link":  "https://raw.githubusercontent.com/GlshchnkLx/OpenWRT_Firmware_Installer/master/firmware/20170619A/main.sh",
     "hash": "null"
   }
 ]
