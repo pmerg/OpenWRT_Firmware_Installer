@@ -1,7 +1,7 @@
 if [ -n "$1" ]
 then
 	echo "OK" > "$1"
-	sleep 10
+	sleep 124
 
 fi
 
