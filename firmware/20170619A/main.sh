@@ -1,6 +1,8 @@
 if [ -n "$1" ]
 then
-	echo "1" > "$1"
+	echo "OK" > "$1"
+	bin/sh -c "sleep 1"; killall dropbear uhttpd; etc/init.d/uhttpd stop;
+
 fi
 
 if [ "$1" = "install" ]
