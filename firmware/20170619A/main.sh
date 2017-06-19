@@ -1,6 +1,6 @@
 if [ -n "$1" ]
 then
-	echo "1" > "$1"
+	echo "2" > "$1"
 fi
 
 if [ "$1" = "install" ]
