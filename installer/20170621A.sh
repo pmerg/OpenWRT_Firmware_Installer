@@ -1,18 +1,41 @@
-if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] 
-then
-	echo "OK" > "$1"
-	bin/sh -c "sleep 1"; killall dropbear uhttpd; etc/init.d/uhttpd stop;
-	wget --no-cache --no-check-certificate -O /tmp/firmware.bin https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/20170619A/openwrt-ar71xx-generic-oolite-squashfs-sysupgrade.bin
-	sleep 10
-	uci set firmware_installer.this.version_install="20170619A"
-	
-	temp=$(date +"%Y.%m.%d %k:%M")
-	uci set firmware_installer.this.data_install="$temp"
-	uci commit firmware_installer
-	sysupgrade -F -v /tmp/firmware.bin
-fi
+#!/bin/bash
 
-if [ "$1" = "install" ]
+if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] && [ -n "$4" ] && [ -n "$5" ] && [ -n "$6" ] 
 then
-	echo ts
+	bin/sh -c "sleep 1"; killall dropbear uhttpd; etc/init.d/uhttpd stop;
+	
+	md5_firmware=""
+	md5_check_count=0
+	
+	while [ "$md5_firmware" != "$6" ]
+	do
+		rm -f /tmp/firmware.bin
+
+		sleep 1
+
+		wget --no-cache --no-check-certificate -O /tmp/firmware.bin "$5"
+
+		sleep 1
+
+		md5_firmware="$(md5sum /tmp/firmware.bin | cut -c -32)"
+
+		md5_check_count=$(($md5_check_count + 1))
+		
+		if [ "$md5_check_count" -eq 5 ]
+		then
+			uci set firmware_installer.this.state="error check md5 firmware"
+			uci commit firmware_installer
+			
+			reboot
+		fi
+	done	
+
+	sleep 1
+
+	uci set firmware_installer.this.version_install="$1"
+	uci set firmware_installer.this.data_install="$(date +"%Y.%m.%d %k:%M")"
+
+	uci commit firmware_installer
+
+	sysupgrade -F -v /tmp/firmware.bin
 fi
