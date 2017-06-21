@@ -4,6 +4,7 @@
     "Description": "Прошивка для свободной установки",
     "ReleaseData": "2017.06.21 00:00",
     "installer": "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/installer/free_install_a.sh",
+    "link": "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/installer/free_install_a.sh",
     "firmware":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/free_install_a.bin",
     "firmware_md5": "null"
   },
