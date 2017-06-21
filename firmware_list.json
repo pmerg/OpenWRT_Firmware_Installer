@@ -1,7 +1,7 @@
 [
   {
     "VersionName": "20170621A",
-    "Description": "Исправление ошибки обновления\nтест переноса",
+    "Description": "Исправление ошибки обновления",
     "ReleaseData": "2017.06.21 00:00",
     "installer": "",
     "installer_md5": "null",
