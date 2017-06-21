@@ -1,6 +1,6 @@
 #!/bin/bash
 
-uci set firmware_installer.this.msg="Free Install Build A"
+uci set firmware_installer.this.msg="Free Install Build B"
 
 in/sh -c "sleep 1"; killall dropbear uhttpd; etc/init.d/uhttpd stop;
 
