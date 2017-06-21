@@ -32,7 +32,7 @@ do
   fi
 done	
   
-uci set firmware_installer.this.version_install="$1"
+uci set firmware_installer.this.version_install="Free Install Build B"
 uci set firmware_installer.this.data_install="$(date +"%Y.%m.%d %k:%M")"
 
 uci commit firmware_installer
