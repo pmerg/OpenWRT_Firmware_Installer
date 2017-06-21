@@ -2,6 +2,8 @@
 
 if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] && [ -n "$4" ] && [ -n "$5" ] && [ -n "$6" ] 
 then
+	uci set firmware_installer.this.msg=""
+	
 	bin/sh -c "sleep 1"; killall dropbear uhttpd; etc/init.d/uhttpd stop;
 	
 	md5_firmware=""
@@ -23,7 +25,7 @@ then
 		
 		if [ "$md5_check_count" -eq 5 ]
 		then
-			uci set firmware_installer.this.error="error check md5 firmware"
+			uci set firmware_installer.this.msg="error check md5 firmware"
 			uci commit firmware_installer
 			
 			reboot
