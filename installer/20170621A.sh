@@ -23,7 +23,7 @@ then
 		
 		if [ "$md5_check_count" -eq 5 ]
 		then
-			uci set firmware_installer.this.state="error check md5 firmware"
+			uci set firmware_installer.this.error="error check md5 firmware"
 			uci commit firmware_installer
 			
 			reboot
