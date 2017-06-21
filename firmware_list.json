@@ -4,7 +4,6 @@
     "Description": "Исправление ошибки обновления",
     "ReleaseData": "2017.06.21 00:00",
     "installer": "",
-    "installer_md5": "null",
     "firmware":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/20170621A.bin",
     "firmware_md5": "null"
   }
