@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] && [ -n "$4" ] && [ -n "$5" ] && [ -n "$6" ] 
+if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] 
 then
 	uci set firmware_installer.this.msg=""
 	
@@ -9,13 +9,13 @@ then
 	md5_firmware=""
 	md5_check_count=0
 	
-	while [ "$md5_firmware" != "$6" ]
+	while [ "$md5_firmware" != "$3" ]
 	do
 		rm -f /tmp/firmware.bin
 
 		sleep 1
 
-		wget --no-cache --no-check-certificate -O /tmp/firmware.bin "$5"
+		wget --no-cache --no-check-certificate -O /tmp/firmware.bin "$2"
 
 		sleep 1
 
