@@ -1,10 +1,18 @@
 [
   {
+    "VersionName": "Free Install",
+    "Description": "Прошивка для свободной установки",
+    "ReleaseData": "2017.06.21 00:00",
+    "installer": "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/installer/free_install_a.sh",
+    "firmware":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/free_install_a.bin",
+    "firmware_md5": "null"
+  },
+  {
     "VersionName": "20170621A",
     "Description": "Базовая сборка прошивки. Включена поддержка балансировки трафика",
     "ReleaseData": "2017.06.21 00:00",
     "installer": "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/installer/20170621A.sh",
     "firmware":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/20170621A.bin",
     "firmware_md5": "ade4cf237f8987fe72f2db219b9315a1"
-  }
+  }  
 ]
