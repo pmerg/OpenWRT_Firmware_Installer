@@ -9,13 +9,13 @@ rm -f /tmp/firmware.bin
 md5_firmware=""
 md5_check_count=0
 
-while [ "$md5_firmware" != "aa7de5ac13dabc984e97b9572520e657" ]
+while [ "$md5_firmware" != "a68664ee221df9b9619807fddfea3498" ]
 do
   rm -f /tmp/firmware.bin
 
   sleep 1
 
-  wget --no-cache --no-check-certificate -O /tmp/firmware.bin https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/free_install_a.bin
+  wget --no-cache --no-check-certificate -O /tmp/firmware.bin https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/free_install_b.bin
 
   sleep 1
 
