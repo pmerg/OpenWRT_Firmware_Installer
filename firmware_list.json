@@ -3,7 +3,7 @@
     "VersionName": "20170621A",
     "Description": "Базовая сборка:\t\n\rпопыткаа",
     "ReleaseData": "2017.06.21 00:00",
-    "installer": "",
+    "installer": "https://raw.githubusercontent.com/GlshchnkLx/OpenWRT_Firmware_Installer/master/installer/20170621A.sh",
     "firmware":  "https://github.com/GlshchnkLx/OpenWRT_Firmware_Installer/raw/master/firmware/20170621A.bin",
     "firmware_md5": "null"
   }
